@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Leak Detection System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h3 class="brand">NT Safety Shield</h3>
+
+    <h1>🚨 Gas Leak Detection System</h1>
+
+    <div class="card">
+
+        <label>Do you smell gas in your home?</label>
+        <select id="smell">
+            <option value="0">No</option>
+            <option value="40">Yes</option>
+        </select>
+
+        <label>Do you hear a hissing sound near gas pipes?</label>
+        <select id="sound">
+            <option value="0">No</option>
+            <option value="30">Yes</option>
+        </select>
+
+        <label>Ventilation Condition</label>
+        <select id="ventilation">
+            <option value="0">Good</option>
+            <option value="15">Average</option>
+            <option value="30">Poor</option>
+        </select>
+
+        <button onclick="analyzeGas()">Analyze Risk</button>
+
+        <div id="resultBox">
+
+            <h2 id="status"></h2>
+
+            <p><strong>Risk Score:</strong> <span id="risk"></span></p>
+
+            <div class="bar">
+                <div id="progress"></div>
+            </div>
+
+            <div id="recommendation"></div>
+
+            <p id="time"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
